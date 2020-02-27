@@ -59,21 +59,21 @@ var KTLoginGeneral = function(token) {
                     btn.removeClass('kt-spinner kt-spinner--right kt-spinner--sm kt-spinner--light').attr('disabled', false);
                     if(response.code == 200){
                         showErrorMsg(form, 'success', response.message);
-                        setTimeout(function() {
+                        // setTimeout(function() {
                             document.location.href = response.url;
-                        }, 2000);
+                        // }, 2000);
                     }else{
                         btn.removeClass('kt-spinner kt-spinner--right kt-spinner--sm kt-spinner--light').attr('disabled', false);
-                        setTimeout(function() {
+                        // setTimeout(function() {
                             showErrorMsg(form, 'danger', response.message);
-                        }, 2000);
+                        // }, 2000);
                     }
                 },
                 error : function(e){
                     btn.removeClass('kt-spinner kt-spinner--right kt-spinner--sm kt-spinner--light').attr('disabled', false);
-                    setTimeout(function() {
+                    // setTimeout(function() {
                         showErrorMsg(form, 'danger', 'Terjadi kesalahan pada server.');
-                    }, 2000);
+                    // }, 2000);
                 }
             });
         });
