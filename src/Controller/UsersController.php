@@ -78,7 +78,7 @@ class UsersController extends AppController
             $breadCrumbs = [
                 Router::url(['action' => 'index']) => $titlesubModule
             ];
-            $this->set(compact('titleModule','breadCrumbs','titlesubModule'));
+            $this->set(compact('breadCrumbs','titlesubModule'));
         }
         
         
@@ -102,7 +102,7 @@ class UsersController extends AppController
             Router::url(['action' => 'index']) => "List ".$this->titleModule,
             Router::url(['action' => 'view',$id]) => $titlesubModule
         ];
-        $this->set(compact('titleModule','breadCrumbs','titlesubModule'));
+        $this->set(compact('breadCrumbs','titlesubModule'));
         $this->set('record', $record);
     }
 
@@ -168,13 +168,13 @@ class UsersController extends AppController
                 'id' => $record->group_id
             ]
         ]]]);
-        $this->set(compact('record', 'userGroups'));
+        $this->set(compact('userGroups'));
         $titlesubModule = "Edit ".$this->titleModule;
         $breadCrumbs = [
             Router::url(['action' => 'index']) => "List ".$this->titleModule,
             Router::url(['action' => 'edit',$id]) => $titlesubModule
         ];
-        $this->set(compact('titleModule','breadCrumbs','titlesubModule'));
+        $this->set(compact('breadCrumbs','titlesubModule'));
         $this->set('record', $record);
     }
 
